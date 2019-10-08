@@ -1,0 +1,142 @@
+/* Alt der gælder for mobil og højere */
+
+* { /* Gælder alt på hele siden */
+    -webkit-box-sizing: border-box; /* -webkit- browserunderstøttelse */
+    box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen mv. */
+}
+
+body {
+    margin: 0; /* Ingen kanter i siden af browser */
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background: #cbe2d2;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+ul, ol {
+    margin: 0; /* Ingen ydre margen fra lister */
+    padding: 0; /* Ingen indre margen fra lister */
+    list-style-position: inside; /* List punkter står på linje */
+}
+
+li {
+    margin: 0; /* Ingen ydre margen fra listpunkter */
+}
+
+p {
+    margin: 0; /* Ingen ydre margen fra paragraffer */
+    padding: 0; /* Ingen indre margen fra paragraffer */
+}
+
+/* Sikrer billeder er responsive */
+img {
+    display: block; /* Billeder er et element (laver linjeskift) */
+    max-width: 100%; /* Bredde må maks fylde 100% */
+    height: auto; /* Højden skal tilpasse sig */
+}
+h2 {
+    margin: 0 -1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.tekst{
+    border-bottom: 1px solid #cccccc;
+    width: 50px;
+    margin: 3px -1rem;
+    text-align: center;
+}
+.tekst1 {
+    border-bottom: 1px solid #cccccc;
+    margin: 3px -1rem;
+}
+
+section {
+    display: flex;
+}
+.scoreboard {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem;
+    display: inline-block;
+    width: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 2rem 0px rgba(0,0,0,0.1);
+}
+html {
+    font-size: 10px;
+}
+
+
+article:last-child {
+    border-right: 1px solid #ccc;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    min-height: 2.5rem;
+    line-height: 2rem;
+    white-space: nowrap;
+    padding: 0 1rem;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+form {
+    margin: -3px -1rem;
+    height: 100%;
+}
+input {
+    border: 0 solid #cccccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    height: 11.2%;
+
+}
+
+#total {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    height: 7.2%;
+}
+
+
+.total {
+    margin: 3px -1rem;
+    font-weight: 700;
+    border-top: 1px solid #cccccc;
+}
+
+@media screen and (min-width: 768px) {
+    /* Alt der ændres i tablet stående fra mobil */
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* Alt der ændres i tablet liggende fra mobil og tablet stående */
+}
+
+@media screen and (min-width: 1200px) {
+    /* Alt der ændres i computer fra mobil, tablet stående og tablet liggende */
+    html {
+        font-size: 14px;
+    }
+}
+
+@media print {
+    /* Alt der gælder for print specifikt */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Sigende titel</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+<div class="scoreboard">
+    <h1>Scoreboard</h1>
+    <section class="yes">
+        <article class="holes">
+            <div class="tekst"><h2>Bane</h2></div>
+            <div class="tr holes">
+                <h2>1</h2>
+                <h2>2</h2>
+                <h2>3</h2>
+                <h2>4</h2>
+                <h2>5</h2>
+                <h2>6</h2>
+                <h2>7</h2>
+                <h2>8</h2>
+                <h2>9</h2>
+            </div>
+            <strong class="total">
+                Total
+            </strong>
+        </article>
+        <article class="player">
+            <div class="tekst1"><h2>Slag</h2></div>
+            <form id="lines-form-1">
+                <input type="number" name="i1">
+                <br>
+                <input type="number" name="i2">
+                <br>
+                <input type="number" name="i3">
+                <br>
+                <input type="number" name="i4">
+                <br>
+                <input type="number" name="i5">
+                <br>
+                <input type="number" name="i6">
+                <br>
+                <input type="number" name="i7">
+                <br>
+                <input type="number" name="i8">
+                <br>
+                <input type="number" name="i9">
+                <br>
+            </form>
+            <div id="total">0</div>
+        </article>
+    </section>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('form#lines-form-1 :input').change(function() {
+            var tot = 0;
+            $("form#lines-form-1 :input").each(function() {
+                tot += Number($(this).val());
+                // Could be written as
+                // tot += +this.value;
+            });
+            $('#total').text(tot);
+        });
+    });
+</script>
+</body>
+</html>
